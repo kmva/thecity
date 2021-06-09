@@ -1,7 +1,7 @@
-@extends('layouts.layout')
+@extends('layouts.single')
 
 @section('content')
-<div class="container">
+<div class="container cities">
    <!--  @if (Route::has('login'))
         <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
             @auth
@@ -17,11 +17,15 @@
     @endif -->
 
     <!-- <img src="/img/seoul.jpeg" alt=""> -->
-        <h1>Cities</h1>
-        <ul>
+        <h1 class="cities_h1">Города</h1>
+        <ul class="cities_list">
             @foreach($cities as $city)
-                <li>
-                    <a href="#">{{ $city['name'] }} ({{ $city['country'] }})</a>
+                <li class="cities_list__item">
+                    <!-- {{ $city['img_url'] }} -->
+                    <img src="/img/4.jpeg" alt="Город {{ $city['name'] }}">
+                    <a href="/cities/{{ $city['id'] }}">
+                        <p>{{ $city['name'] }} ({{ $city['country'] }})</p>
+                    </a>
                 </li>
             @endforeach
         </ul>

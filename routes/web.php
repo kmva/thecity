@@ -22,3 +22,8 @@ Route::get('/', function () {
 Route::get('/cities', [CityController::class, 'index']);
 Route::get('/cities/create', [CityController::class, 'create']);
 Route::get('/cities/{id}', [CityController::class, 'show']);
+
+Route::get('/signup', [UserController::class], 'create');
+Route::post('/signup', [UserController::class], 'store');
+Route::get('/login', [UserController::class], 'create');
+/* Route::post('/login' [UserController::class], ''); */

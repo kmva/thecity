@@ -3,17 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\City;
 
 class CityController extends Controller
 {
     public function index() {
         $heading = request('heading');
         $cities = City::orderBy('name')->get();
-        $cities = [
-            ['name' => 'Seoul', 'country' => 'Korea'],
-            ['name' => 'Tbilis', 'country' => 'Georgia'],
-            ['name' => 'Marrakesh', 'country' => 'Marocco']
-        ];
 
         return view('cities.index', ['cities' => $cities, 'heading' => $heading]);
     }

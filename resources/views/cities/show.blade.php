@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.single')
 
 @section('content')
 <div class="container">
@@ -10,8 +10,8 @@
         </div>
     </section>
     <section>
-        <p>Country: {{ $city->country }}</p>
-        <p>Population: {{ $city->population }}</p>
+        <p>Страна: {{ $city->country }}</p>
+        <p>Население: {{ $city->population }}</p>
     </section>
     <section>
         <p>{{ $city->full_desc }}</p>

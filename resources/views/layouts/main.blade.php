@@ -13,9 +13,6 @@
         <link href="/css/main.css" rel="stylesheet">
     </head>
     <body class="antialiased">
-        <!-- <header>
-            <img src="/img/logo.png">
-        </header> -->
             @yield('content')
     </body>
 </html>

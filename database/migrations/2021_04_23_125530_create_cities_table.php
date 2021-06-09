@@ -21,7 +21,7 @@ class CreateCitiesTable extends Migration
             $table->string('country', 100);
             $table->float('lat');
             $table->float('lang');
-            $table->integer('population');
+            $table->string('population', 50);
             $table->text('img_url');
             $table->timestamps();
         });
